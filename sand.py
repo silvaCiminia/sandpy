@@ -74,7 +74,7 @@ class Pile:
         return rep
 
     @classmethod
-    def max(cls):
+    def max_pile(cls):
         return Pile([[3] * cls.width] * cls.height)
 
     @classmethod
@@ -126,18 +126,3 @@ class Pile:
             self.sand[i].count += pile.sand[i].count
 
         self.balance()
-
-
-Pile.set_dims(16)
-
-a = Pile.max()
-print(a)
-
-b = Pile.zero()
-print(b)
-
-a.add(b)
-print(a)
-a = Pile.max()
-a.add(a)
-print(a)
